@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="web gabut dengan isi yg gabut">
+  <meta name="keywords" content="zaky mubarok">
+  <meta name="author" content="zaky mubarok">
+  <title>Zaky Mubarok</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tilt.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="trailer" class="size-5 bg-[#efefef] rounded-full mix-blend-difference fixed top-0 left-0 z-[10000] pointer-events-none opacity-0 transition-opacity ease-in-out duration-500 grid place-items-center"></div>
+  <div class="fixed z-50 text-light-gray hover:text-dark-gray hover:border-dark-gray right-4 bottom-4 p-2 rounded-xl border-2 backdrop-blur">
+    <a href="https://zakaii.vercel.app/">
+      <i data-lucide="bot-message-square"></i>
+    </a>
+  </div>
+  <header class="sticky top-0 left-0 bg-transparent w-full z-50">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between md:justify-center relative">
+        <div class="mx-3 my-1 size-10 block md:hidden flex items-center justify-center backdrop-blur rounded-md">
+          <button id="menuBtn" onclick="toggleMenu()">
+            <div class="wrap_line flex flex-col items-center justify-center space-y-2"> 
+              <span class="line_menu origin-top-left"></span>
+              <span class="line_menu origin-bottom-left"></span>
+            </div>
+          </button>
+        </div>        
+        <nav class="m-4 hidden md:block z-50">
+          <div class="absolute top-full left-3 md:static">
+            <ul class="uppercase font-medium text-medium-gray flex flex-col items-start md:items-center justify-center md:flex-row md:space-x-6 space-y-4 md:space-y-0 md:bg-transparent">
+              <li class="group backdrop-blur-lg rounded"><a href="#home" style="--bg: var(--light-gray);" class="act group-hover:underline px-1 nav_link transition-colors duration-300">home</a></li>
+              <li class="group backdrop-blur-lg rounded"><a href="#about" style="--bg: var(--accent-blue);" class="group-hover:underline px-1 nav_link transition-colors duration-300">about</a></li>
+              <li class="group backdrop-blur-lg rounded"><a href="#service" style="--bg: var(--accent-wine);" class="group-hover:underline px-1 nav_link transition-colors duration-300">service</a></li>
+              <li class="group backdrop-blur-lg rounded"><a href="#project" style="--bg: var(--accent-lavender);" class="group-hover:underline px-1 nav_link transition-colors duration-300">project</a></li>
+              <li class="group backdrop-blur-lg rounded"><a href="#contact" style="--bg: var(--accent-mustard);" class="group-hover:underline px-1 nav_link transition-colors duration-300">contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main class="flex flex-col items-center justify-center">
+    <section id="home" class="min-h-dvh w-full flex items-center justify-center overflow-hidden">
+      <div class="container mx-auto">
+        <div class="mx-4 flex items-center justify-center">
+          <article class="flex flex-col md:flex-row md:flex-row items-center justify-between">
+            <div class="m-12 mt-0">
+              <div class="tilt">
+                <img src="assets/img/me.svg" alt="me">
+              </div>
+            </div>
+            <div class="m-12 -translate-x-4 hero">
+              <h3 class="block text-medium-gray font-medium text-xl" id="write"></h3>
+              <div class="name">
+                <h2 id="animated-text" class="text-2xl translate-x-9">Zaky Mubarok</h2>
+              </div>
+              <h5 class="font-medium text-transparent bg-clip-text bg-gradient-to-r from-light-gray to-dark-gray overflow-hidden whitespace-nowrap border-r-2 border-current animate-typing">
+                Crafting Clean Code </br> & Seamless Experiences<span class="text-darker-gray">.</span>
+              </h5>
+              <div id="social-container" class="my-4 flex items-center justify-start space-x-4">
+                <a href="https://www.linkedin.com/in/zaky-mubarok-469128328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon rounded-lg border-2 border-medium-gray text-light-gray hover:text-medium-gray hover:border-light-gray p-1"><i data-lucide="linkedin"></i></a>
+                <a href="https://www.instagram.com/enpisii__" class="social-icon rounded-lg border-2 border-medium-gray text-light-gray hover:text-medium-gray hover:border-light-gray p-1"><i data-lucide="instagram"></i></a>
+                <a href="https://github.com/NotZaky05" class="social-icon rounded-lg border-2 border-medium-gray text-light-gray hover:text-medium-gray hover:border-light-gray p-1"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+<section id="about" class="relative min-h-dvh w-full py-16 flex items-center justify-center" aria-label="About Me">
+    <div class="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
+        <h1 class="text-9xl font-black text-accent-blue tracking-widest md:rotate-0 rotate-90 select-none">ABOUT</h1>
+    </div>
+
+    <div class="container mx-auto px-4">
+        <article class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="order-1 space-y-8">
+                    <div class="space-y-6">
+                        <p class="text-base md:text-lg text-medium-gray leading-relaxed">
+                            I am a passionate <span class="text-accent-blue font-semibold hover:underline transition-all">Front-End Developer</span> 
+                            dedicated to transforming concepts into interactive, aesthetically pleasing, 
+                            functional, and fast interfaces.
+                        </p>
+                        <p class="text-base md:text-lg text-medium-gray leading-relaxed">
+                            With a focus on <span class="text-accent-blue font-semibold hover:underline transition-all">user experience</span>, 
+                            I ensure that design and performance work hand in hand for optimal results.
+                        </p>
+                        <p class="text-base md:text-lg text-medium-gray leading-relaxed">
+                            I approach each project by understanding the 
+                            <span class="text-accent-blue font-semibold hover:underline transition-all">client's vision</span>, 
+                            delivering tailored solutions that meet their specific needs.
+                        </p>
+                        <p class="text-base md:text-lg text-medium-gray leading-relaxed">
+                            Beyond freelance projects, I continuously enhance my skills through 
+                            <span class="text-accent-blue font-semibold hover:underline transition-all">personal projects</span> 
+                            and stay engaged with the 
+                            <span class="text-accent-blue font-semibold hover:underline transition-all">latest trends in web development</span>.
+                        </p>
+                    </div>
+                </div>
+              <aside class="order-2 mx-4">
+                    <div class=" rounded-full bg-gradient-to-t from-accent-blue from-10% via-accent-blue/30 via-30% to-transparent to-60% p-1">
+                        <figure class="relative aspect-square drop-shadow-2xl rounded-full tilt overflow-hidden" id="tiltElement">
+                            <img 
+                                src="assets/img/me.png" 
+                                alt="Zaky Mubarok - Front-End Developer"
+                                class="w-full h-full object-cover rounded-full z-10 transition-all duration-500 ease-out"
+                                loading="lazy"
+                            />
+                        </figure>
+                    </div>
+                    <div class="pt-4">
+                        <h3 class="text-xl font-semibold text-medium-gray mb-4">Core Technologies</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-accent-blue/10 hover:bg-accent-blue/80 text-accent-blue hover:text-off-white rounded-full text-sm">HTML5</span>
+                            <span class="px-4 py-2 bg-accent-blue/10 hover:bg-accent-blue/80 text-accent-blue hover:text-off-white rounded-full text-sm">CSS3</span>
+                            <span class="px-4 py-2 bg-accent-blue/10 hover:bg-accent-blue/80 text-accent-blue hover:text-off-white rounded-full text-sm">JavaScript</span>
+                            <span class="px-4 py-2 bg-accent-blue/10 hover:bg-accent-blue/80 text-accent-blue hover:text-off-white rounded-full text-sm">React.js</span>
+                            <span class="px-4 py-2 bg-accent-blue/10 hover:bg-accent-blue/80 text-accent-blue hover:text-off-white rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </div>
+</section>
+    <section id="service" class="relative min-h-screen w-full py-16 overflow-hidden select-none" aria-label="Our Services">
+        <div class="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none" aria-hidden="true">
+            <h1 class="text-9xl font-black text-accent-wine tracking-widest rotate-90 md:rotate-0 select-none">SERVICE</h1>
+        </div>
+      
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div class="group h-96 w-full [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                            <article class="h-full rounded-lg shadow-lg overflow-hidden">
+                                <div class="p-8 flex flex-col items-center justify-center h-full bg-white relative">
+                                  <div class="absolute top-2 left-2">
+                                    <h1 class="text-off-white text-9xl">01</h1>
+                                  </div>
+                                    <div class="size-24 z-10 bg-accent-wine rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="figma" class="w-12 h-12 text-white"></i>
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-gray-800 text-center">Design Service</h3>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                            <article class="h-full rounded-lg shadow-lg overflow-hidden">
+                                <div class="p-8 flex flex-col h-full bg-accent-wine text-white">
+                                    <h3 class="text-2xl font-bold mb-4 text-center">Design Service</h3>
+                                    <p class="text-center mb-6">We create stunning and intuitive designs that captivate your audience and elevate your brand.</p>
+                                    <ul class="space-y-4 mt-auto">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            UI/UX Design
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Brand Identity
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Prototyping
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="group h-96 w-full [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                            <article class="h-full rounded-lg shadow-lg overflow-hidden">
+                                <div class="p-8 flex flex-col items-center justify-center h-full bg-white relative">
+                                  <div class="absolute top-2 left-2">
+                                    <h1 class="text-off-white text-9xl">02</h1>
+                                  </div>
+                                  <div class="size-24 z-10 bg-accent-wine rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="code" class="w-12 h-12 text-white"></i>
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-gray-800 text-center">Web Development</h3>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                            <article class="h-full rounded-lg shadow-lg overflow-hidden">
+                                <div class="p-8 flex flex-col h-full bg-accent-wine text-white">
+                                    <h3 class="text-2xl font-bold mb-4 text-center">Web Development</h3>
+                                    <p class="text-center mb-6">We build robust, scalable, and high-performance websites tailored to your specific needs.</p>
+                                    <ul class="space-y-4 mt-auto">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Responsive Design
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Custom Solutions
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Performance Optimization
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group h-96 w-full [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                            <article class="h-full rounded-lg shadow-lg overflow-hidden">
+                                <div class="p-8 flex flex-col items-center justify-center h-full bg-white relative">
+                                  <div class="absolute top-2 left-2">
+                                    <h1 class="text-off-white text-9xl">03</h1>
+                                  </div>
+                                    <div class="size-24 z-10 bg-accent-wine rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="pen-tool" class="w-12 h-12 text-white"></i>
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-gray-800 text-center">Illustration</h3>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                            <article class="h-full rounded-lg shadow-lg overflow-hidden">
+                                <div class="p-8 flex flex-col h-full bg-accent-wine text-white">
+                                    <h3 class="text-2xl font-bold mb-4 text-center">Illustration</h3>
+                                    <p class="text-center mb-6">Our custom illustrations bring your ideas to life, adding a unique touch to your projects.</p>
+                                    <ul class="space-y-4 mt-auto">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Custom Artwork
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Digital Illustrations
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check"></i>
+                                            Icon Design
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section id="project" class="relative min-h-dvh w-full py-16 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
+      <h1 class="text-9xl font-black text-accent-lavender tracking-widest md:rotate-0 rotate-90">PROJECT</h1>
+    </div>
+  <div class="container mx-auto z-10">
+    <div class="slider relative mx-4 rounded">
+      <div class="slide-item">
+        <article class="flex items-center justify-center">
+          <figure class="m-4">
+            <div class="aspect-video overflow-hidden rounded">
+              <img src="assets/img/gooey.jpg" alt="Gooey illustration" class="object-cover object-center w-full h-full">
+            </div>
+            <figcaption class="mt-2 text-center text-white">
+              A creative gooey illustration
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+      <div class="slide-item">
+       <article class="flex items-center justify-center">
+          <figure class="m-4">
+            <div class="aspect-video overflow-hidden rounded">
+              <img src="assets/img/gooey.jpg" alt="Gooey illustration" class="object-cover object-center w-full h-full">
+            </div>
+            <figcaption class="mt-2 text-center text-white">
+              porto
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+      <div class="slide-item">
+       <article class="flex items-center justify-center">
+          <figure class="m-4">
+            <div class="aspect-video overflow-hidden rounded">
+              <img src="assets/img/gooey.jpg" alt="Gooey illustration" class="object-cover object-center w-full h-full">
+            </div>
+            <figcaption class="mt-2 text-center text-white">
+              pro
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+      <div class="slide-item">
+       <article class="flex items-center justify-center">
+          <figure class="m-4">
+            <div class="aspect-video overflow-hidden rounded">
+              <img src="assets/img/gooey.jpg" alt="Gooey illustration" class="object-cover object-center w-full h-full">
+            </div>
+            <figcaption class="mt-2 text-center text-white">
+              zak
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+        <div id="next" class="absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-soft-black size-8 flex items-center justify-center focus:ring-2 ring-accent-lavender text-off-white border-2">
+          <i data-lucide="chevron-right"></i>
+        </div>
+        <div id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-soft-black size-8 flex items-center justify-center focus:ring-2 ring-accent-lavender text-off-white border-2">
+          <i data-lucide="chevron-left"></i>
+        </div>     
+    </div>
+  </div>
+</section-->
+    <section id="project" class="relative min-h-dvh w-full py-16 flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
+      <h1 class="text-9xl font-black text-accent-lavender tracking-widest md:rotate-0 rotate-90">PROJECT</h1>
+    </div>
+      <div class="container mx-auto z-10">
+          <div class="slider mx-4 relative rounded">
+            <article class="slide-item">
+                    <figure class="flex flex-col md:flex-row items-center justify-center p-6 h-">
+                        <div class="aspect-video overflow-hidden rounded-lg md:w-1/2 m-4 group">
+                            <img 
+                                src="assets/img/zakai.jpg" 
+                                alt="zakai illustration" 
+                                class="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-110"
+                            >
+                        </div>
+                        <figcaption class="md:w-1/2 m-4 text-center md:text-left">
+                            <h1 class="text-off-white text-3xl font-bold mb-4">
+                                ZakAi
+                            </h1>
+                            <p class="text-gray-300 mb-4">
+                              is an AI-powered website offering a variety of AI models from Groq AI, providing advanced solutions to enhance digital experiences and solve complex problems.                            </p>
+                            <div class="flex justify-center md:justify-start space-x-4">
+                                <a href="https://zakaii.vercel.app/" class="px-6 py-2 bg-accent-lavender text-soft-black rounded-full hover:bg-opacity-80 transition">
+                                    View Project
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+            </article>
+            <article class="slide-item">
+                    <figure class="flex flex-col md:flex-row items-center justify-center p-6 h-">
+                        <div class="aspect-video overflow-hidden rounded-lg md:w-1/2 m-4 group">
+                            <img 
+                                src="assets/img/gooey.jpg" 
+                                alt="Gooey illustration" 
+                                class="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-110"
+                            >
+                        </div>
+                        <figcaption class="md:w-1/2 m-4 text-center md:text-left">
+                            <h4 class="text-off-white text-3xl font-bold mb-4">
+                                Gooey Cursor
+                            </h4>
+                            <p class="text-gray-300 mb-4">
+                                An innovative cursor interaction design that adds a smooth, 
+                                playful element to user experience with dynamic gooey effects.
+                            </p>
+                            <div class="flex justify-center md:justify-start space-x-4">
+                                <a href="https://gooey-cursor.vercel.app/" class="px-6 py-2 bg-accent-lavender text-soft-black rounded-full hover:bg-opacity-80 transition">
+                                    View Project
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+            </article>
+            <article class="slide-item">
+                    <figure class="flex flex-col md:flex-row items-center justify-center p-6 h-">
+                        <div class="aspect-video overflow-hidden rounded-lg md:w-1/2 m-4 group">
+                            <img 
+                                src="assets/img/zakpro.jpg" 
+                                alt="zakpro illustration" 
+                                class="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-110"
+                            >
+                        </div>
+                        <figcaption class="md:w-1/2 m-4 text-center md:text-left">
+                            <h1 class="text-off-white text-3xl font-bold mb-4">
+                                ZakPro
+                            </h1>
+                            <p class="text-gray-300 mb-4">
+                             Is a website offering illustration, web development, and creative design services, helping you create engaging and functional digital solutions. 
+                            </p>
+                            <div class="flex justify-center md:justify-start space-x-4">
+                                <a href="https://zakpro.vercel.app/" class="px-6 py-2 bg-accent-lavender text-soft-black rounded-full hover:bg-opacity-80 transition">
+                                    View Project
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+            </article>
+            <article class="slide-item">
+                    <figure class="flex flex-col md:flex-row items-center justify-center p-6 h-">
+                        <div class="aspect-video overflow-hidden rounded-lg md:w-1/2 m-4 group">
+                            <img 
+                                src="assets/img/gooey.jpg" 
+                                alt="porto #1 illustration" 
+                                class="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-110"
+                            >
+                        </div>
+                        <figcaption class="md:w-1/2 m-4 text-center md:text-left">
+                          <h1 class="text-off-white text-3xl font-bold mb-4">
+                            Portfolio #1
+                          </h1>
+                          <p class="text-gray-300 mb-4">
+                            A showcase of my first project, featuring a sleek and dynamic design that enhances the user experience.
+                          </p>
+                            <div class="flex justify-center md:justify-start space-x-4">
+                                <a href="https://zakymubarok-code.github.io/" class="px-6 py-2 bg-accent-lavender text-soft-black rounded-full hover:bg-opacity-80 transition">
+                                    View Project
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+            </article>
+          </div>
+        <button class="size-8 left-0 top-1/2 -translate-y-1/2 absolute border-2 bg-soft-black text-off-white rounded-full flex items-center justify-center" id="prev" aria-label="Previous Slide">
+      <i data-lucide="chevron-left" class="pointer-events-none"></i>
+    </button>
+    <button class="size-8 right-0 top-1/2 -translate-y-1/2 absolute border-2 bg-soft-black text-off-white rounded-full flex items-center justify-center" id="next" aria-label="Next Slide">
+      <i data-lucide="chevron-right" class="pointer-events-none"></i>
+    </button>
+      </div>
+</section>
+    <section id="contact" class="min-h-dvh w-full py-16 relative flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
+          <h1 class="text-9xl font-black text-accent-mustard tracking-widest md:rotate-0 rotate-90">CONTACT</h1>
+      </div>
+      <div class="container mx-auto px-4 z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8">Get in Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+                        <p class="mb-4 text-medium-gray">Feel free to reach out. I'd love to hear from you!</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center flex-col">
+                              <i data-lucide="mail" class="text-accent-mustard"></i>
+                                <span class="hover:underline">zakymubarok05022009@gmail.com</span>
+                            </div>
+                            <div class="flex items-center flex-col">
+                              <i data-lucide="phone" class="text-accent-mustard"></i>
+                                <span class="hover:underline">+62 821 2025 9592</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/zaky-mubarok-469128328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-medium-gray hover:text-accent-mustard transition-colors duration-300">
+                                  <i data-lucide="linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/enpisii_" class="text-medium-gray hover:text-accent-mustard transition-colors duration-300">
+                                  <i data-lucide="instagram"></i>
+                                </a>
+                                <a href="https://github.com/NotZaky05" class="text-medium-gray hover:text-accent-mustard transition-colors duration-300">
+                                  <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+<form id="contactForm" action="https://formspree.io/f/mkgnqrpw" method="POST" class="space-y-6 bg-soft-black p-6 rounded-lg shadow-lg max-w-md mx-auto">
+  <h3 class="text-2xl text-center text-white font-semibold mb-4">Send a Message</h3>
+    <div>
+        <label for="name" class="block text-sm font-medium text-medium-gray mb-2">Name</label>
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i data-lucide="user" class="text-accent-mustard"></i>
+            </span>
+            <input type="text" id="name" name="name" required
+                class="block w-full pl-10 pr-4 py-2 rounded-md border border-accent-mustard bg-soft-black text-off-white placeholder-medium-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-mustard">
+        </div>
+    </div>
+    
+    <div>
+        <label for="email" class="block text-sm font-medium text-medium-gray mb-2">Email</label>
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i data-lucide="mail" class="text-accent-mustard"></i>
+            </span>
+            <input type="email" id="email" name="email" required
+                class="block w-full pl-10 pr-4 py-2 rounded-md border border-accent-mustard bg-soft-black text-off-white placeholder-medium-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-mustard">
+        </div>
+    </div>
+    
+    <div>
+        <label for="message" class="block text-sm font-medium text-medium-gray mb-2">Message</label>
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-start pt-2 pl-3">
+                <i data-lucide="message-square" class="text-accent-mustard"></i>
+            </span>
+            <textarea id="message" name="message" rows="4" required
+                class="block w-full pl-10 pr-4 py-2 rounded-md border border-accent-mustard bg-soft-black text-off-white placeholder-medium-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-mustard"></textarea>
+        </div>
+    </div>
+    
+    <div>
+        <button type="submit"
+            class="w-full bg-accent-mustard text-soft-black py-2 px-4 rounded-md hover:bg-accent-mustard/80 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-mustard">
+            Send Message
+        </button>
+    </div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="z-40 fixed top-5 right-5 bg-accent-mustard text-soft-black py-2 px-4 rounded-md shadow-lg transform transition-all duration-300 opacity-0 translate-y-2">
+        Message sent successfully!
+    </div>
+
+  </main>
+<footer class="bg-soft-black text-off-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- About Section -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-accent-sage">Zaky Mubarok</h3>
+        <p class="text-light-gray">Passionate web developer creating stunning and functional websites. Let's build something amazing together!</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h4 class="text-xl font-semibold text-accent-sage">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-light-gray hover:underline transition-colors duration-300">Home</a></li>
+          <li><a href="#about" class="hover:text-accent-blue hover:underline transition-colors duration-300">About</a></li>
+          <li><a href="#service" class="hover:text-accent-wine hover:underline transition-colors duration-300">Service</a></li>
+          <li><a href="#project" class="hover:text-accent-lavender hover:underline transition-colors duration-300">Project</a></li>
+          <li><a href="#contact" class="hover:text-accent-mustard hover:underline transition-colors duration-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="space-y-4">
+        <h4 class="text-xl font-semibold text-accent-sage">Connect</h4>
+        <div class="flex space-x-4">
+          <a href="https://www.linkedin.com/in/zaky-mubarok-469128328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-medium-gray hover:text-accent-sage transition-colors duration-300">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/enpisii__" class="text-medium-gray hover:text-accent-sage transition-colors duration-300">
+            <i data-lucide="instagram"></i>
+          </a>
+          <a href="https://github.com/NotZaky05" class="text-medium-gray hover:text-accent-sage transition-colors duration-300">
+            <i data-lucide="github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <h1>
+          <q>
+            malas tetaplah malas.
+          </q>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 pt-8 border-t border-dark-gray text-center text-medium-gray">
+      <p>&copy; 2024 Zaky Mubarok. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+  
+  <script src="js/module.js"></script>
+  <script src="js/tilt.main.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
