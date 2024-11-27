@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@view-transition {
+    navigation: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+:root {
+    --off-white: #F5F5F5;
+    --soft-black: #121212;
+    --light-gray: #D3D3D3;
+    --medium-gray: #8A8A8A;
+    --dark-gray: #3E3E3E;
+    --darker-gray: #1A1A1A;
+    
+    --accent-blue: #6B7F9A;
+    --accent-sage: #B3C09E;
+    --accent-mustard: #D4A017;
+    --accent-wine: #D16A76;
+    --accent-lavender: #C6B2C3;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, .fg{
+    font-family: "Faculty Glyphic", serif;
+}
+
+h4, h5, h6{
+    font-family: "Lilita One", sans-serif;
+}
+
+body{
+    font-family: "Montserrat", serif;
+}
+
+body::before {
+    --line: var(--light-gray);
+    --accent: #d3d3d352;
+    --size: 60px;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:
+        linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / var(--size) var(--size),
+        linear-gradient(var(--line) 1px, transparent 1px) 0 0 / var(--size) var(--size),
+        radial-gradient(circle, var(--accent) 10%, transparent 20%) calc(var(--size) / 2) calc(var(--size) / 2) / var(--size) var(--size);
+    mask: 
+        linear-gradient(-15deg, transparent 50%, var(--off-white) 80%);
+    z-index: -1;
+}
+
+.wrap_line:hover > .line_menu{
+    background: var(--soft-black);
+}
+
+.line_menu {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--medium-gray);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.wrap_line.active .line_menu:first-child {
+    transform: rotate(45deg) translateY(-8px);
+}
+
+.wrap_line.active .line_menu:last-child {
+    transform: rotate(-45deg) translateY(8px);
+}
+
+.nav_link {
+    position: relative;
+    width: fit-content;
+
+    &.act {
+        color: var(--soft-black);
+        font-weight: 700;
+    }
+}
+
+.nav_link:not(.act):hover {
+    color: var(--bg);
+}
+
+.nav_link.act:after {
+    content: "";
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    bottom: 0.1em;
+    position: absolute;
+    background: var(--bg);
+    border-radius: 1vw;
+    mix-blend-mode: darken;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: slideUpExpand 0.6s ease forwards;
+}
+
+@keyframes slideUpExpand {
+    0% {
+        width: 0%;
+        height: 3px;
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+    50% {
+        width: 100%;
+        height: 3px;
+        opacity: 0.7;
+        transform: translate(-50%, 5px);
+    }
+    100% {
+        width: 100%;
+        height: 33%;
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+#write {
+    display: flex;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 0.25rem;
+        top: 50%;
+        right: -20%;
+        transform-origin: right;
+        transform: translateY(-50%) scale(0);
+        background: var(--light-gray);
+        animation: line-full 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@keyframes line-full {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+.name {
+    display: flex;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 15%;
+        height: 0.25rem;
+        top: 50%;
+        left: 0%;
+        transform-origin: left;
+        transform: translateY(-50%) scale(0);
+        background: var(--light-gray);
+        animation: line-full 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+#animated-text {
+  user-select: none;
+  color: var(--light-gray);
+  touch-action: none; /* Prevent browser handling of touch gestures */
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.split-char {
+  display: inline-block;
+  opacity: 0;
+  font-weight: 200;
+  transition: all 0.3s ease;
+  padding: 0.15em 0;
+  cursor: pointer;
+  will-change: transform, font-weight, color; /* Optimize animations */
+}
+
+/* Styling untuk spasi */
+.split-space {
+  width: 0.5em;
+  position: relative;
+}
+
+.split-space::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2px;
+  background-color: var(--light-gray);
+  opacity: 0.3;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .split-char {
+    animation: fadeIn 0.7s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+  }
+}
+
+.split-char.hover {
+  font-weight: 900;
+  color: var(--darker-gray);
+}
+
+.split-char.hover-prev,
+.split-char.hover-next {
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.split-char.hover-prev-2,
+.split-char.hover-next-2 {
+  font-weight: 400;
+  color: var(--medium-gray);
+}
+
+.split-space.hover::after,
+.split-space.hover-prev::after,
+.split-space.hover-next::after,
+.split-space.hover-prev-2::after,
+.split-space.hover-next-2::after {
+  opacity: 0.6;
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Optimasi untuk perangkat touch */
+@media (hover: none) {
+  .split-char {
+    padding: 0.25em 0;
+  }
+}
+
+
+.hero {
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--medium-gray);
+  position: absolute;
+  z-index: 2;
+}
+
+.hero::before {
+  top: -0.5rem;
+  right: -3.5rem;
+  border-bottom: none;
+  border-left: none;
+    border-color: var(--light-gray);
+}
+
+.hero::after {
+  bottom: 0;
+  left: -1rem;
+  border-top: none;
+  border-right: none;
+}
+
+.slider {
+    background: var(--soft-black);
+}
+
+.slider .slide-item:not(.slide-item:first-child){
+    display: none;
+}
+
